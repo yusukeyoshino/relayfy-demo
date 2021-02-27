@@ -1,7 +1,10 @@
 import React from "react";
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClipboardList,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = ({
   total,
@@ -22,7 +25,7 @@ const Footer = ({
               setCheckout(false);
               setShowSelectedMeals(true);
             }}
-            icon={faClipboardList}
+            icon={faShoppingCart}
             className={classes.total__order_icon}
           />
         </div>
