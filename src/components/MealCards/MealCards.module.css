@@ -1,0 +1,71 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+ul {
+  padding: 0;
+}
+
+.meal_card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 16px;
+  display: flex;
+  font-family: Quicksand, sans-serif;
+  color: #3caaff;
+  border-radius: 16px;
+  height: 76px;
+}
+.meal_card__picture {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 16px;
+  padding-left: 14px;
+  padding-right: 8px;
+}
+
+.meal_card__descriptions {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meal_card__name {
+  font-size: 12px;
+}
+.meal_card__description {
+  font-size: 11px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.meal_card__price {
+  font-size: 10px;
+}
+
+.meal_card__add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  justify-content: center;
+}
+
+.meal_card__add_icon {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+
+li:nth-child(even) {
+  background-color: #fffacd;
+}
