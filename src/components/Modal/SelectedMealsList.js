@@ -108,7 +108,7 @@ const SelectedMealsList = ({
         // One of 'dark', 'light', or 'light-outline'
         // Defaults to 'dark'
 
-        height: "64px",
+        height: "40px",
         // Defaults to '40px'. The width is always '100%'.
       },
     },
@@ -156,16 +156,20 @@ const SelectedMealsList = ({
               ${Math.round((total * (selectedTip / 100) + total) * 100) / 100}
             </div>
           </div>
-          <div
-            className={classes.pay_button}
-            onClick={(e) => {
-              e.stopPropagation();
-              window.alert("This is demo.");
-            }}
-          >
-            Pay now
-          </div>
-          {paymentRequest && <PaymentRequestButtonElement options={options} />}
+
+          {paymentRequest ? (
+            <PaymentRequestButtonElement options={options} />
+          ) : (
+            <div
+              className={classes.pay_button}
+              onClick={(e) => {
+                e.stopPropagation();
+                window.alert("This is demo.");
+              }}
+            >
+              Pay now
+            </div>
+          )}
         </div>
       </>
     );
