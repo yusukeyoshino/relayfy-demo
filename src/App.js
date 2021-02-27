@@ -26,7 +26,6 @@ function App() {
   const calculateTotal = (selectedMeals) => {
     let totalPrice = 0;
     for (const key in selectedMeals) {
-      console.log(selectedMeals[key].price, selectedMeals[key].count);
       totalPrice += selectedMeals[key].price * selectedMeals[key].count;
     }
     totalPrice = totalPrice / 100;
@@ -37,9 +36,7 @@ function App() {
   const calculateTotalUnits = (selectedMeals) => {
     let total = 0;
     for (const key in selectedMeals) {
-      console.log(selectedMeals[key].count);
       total += selectedMeals[key].count;
-      console.log(total);
     }
 
     setTotalUnits(total);
@@ -60,7 +57,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("bbb");
     window.addEventListener("scroll", scrollEvent);
     return () => window.removeEventListener("scroll", scrollEvent);
   }, [showSelectedMeals]);

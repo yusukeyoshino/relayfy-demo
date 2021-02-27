@@ -14,7 +14,6 @@ const MealCard = ({
 
   useEffect(() => {
     setMealsList(mealsJson);
-    console.log(mealsList);
   }, []);
 
   const getPrice = (price) => {
@@ -29,7 +28,7 @@ const MealCard = ({
       setSelectedMeals((prevState) => newSelectedMeals);
     } else {
       newSelectedMeals[meal.name] = { count: 1, price: meal.price };
-      console.log(newSelectedMeals);
+
       setSelectedMeals(newSelectedMeals);
     }
     calculateTotal(newSelectedMeals);

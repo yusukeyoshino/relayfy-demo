@@ -12,7 +12,6 @@ const MealTabs = ({ isScrolling }) => {
           <div
             onClick={() => {
               setSelectedTab(tab);
-              console.log(selectedTab);
             }}
             className={tab === selectedTab ? classes.tab_selected : classes.tab}
           >

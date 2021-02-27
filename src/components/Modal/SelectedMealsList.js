@@ -39,11 +39,8 @@ const SelectedMealsList = ({
         requestPayerEmail: true,
       });
 
-      console.log(pr);
-
       // Check the availability of the Payment Request API.
       pr.canMakePayment().then((result) => {
-        console.log(result);
         if (result) {
           setPaymentRequest(pr);
         }
@@ -189,7 +186,6 @@ const SelectedMealsList = ({
       calculateTotal(newSelectedMeals);
       calculateTotalUnits(newSelectedMeals);
     }
-    console.log(newSelectedMeals);
   };
   if (total === 0) {
     return (
