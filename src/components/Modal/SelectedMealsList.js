@@ -154,19 +154,15 @@ const SelectedMealsList = ({
             </div>
           </div>
 
-          {paymentRequest ? (
-            <PaymentRequestButtonElement options={options} />
-          ) : (
-            <div
-              className={classes.pay_button}
-              onClick={(e) => {
-                e.stopPropagation();
-                window.alert("This is demo.");
-              }}
-            >
-              Pay now
-            </div>
-          )}
+          <div
+            className={classes.pay_button}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.alert("This is demo.");
+            }}
+          >
+            Pay now
+          </div>
         </div>
       </>
     );
