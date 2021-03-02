@@ -29,7 +29,11 @@ const Footer = ({
               icon={faShoppingCart}
               className={classes.total__order_icon}
             />
-            <div className={classes.total__order_count}>{totalUnits}</div>
+            {totalUnits > 0 ? (
+              <div className={classes.total__order_count}>{totalUnits}</div>
+            ) : (
+              <div className={classes.total__order_count_closed}></div>
+            )}
           </div>
         </div>
       </div>
