@@ -13,6 +13,7 @@
   justify-content: center;
   width: 100%;
   transition: all 0.1s ease-out;
+  z-index: 100;
 }
 
 .header_closed {
@@ -29,4 +30,5 @@
   justify-content: center;
   width: 100%;
   transition: all 0.1s ease-out;
+  z-index: 100;
 }
