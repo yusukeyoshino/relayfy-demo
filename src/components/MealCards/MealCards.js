@@ -76,6 +76,265 @@ const MealCard = ({
             </li>
           );
         })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        {mealsList.map((meal) => {
+          return (
+            <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
+              <img
+                className={classes.meal_card__picture}
+                src={`images/${meal.image}`}
+                alt=""
+              />
+              <div className={classes.meal_card__descriptions}>
+                <div className={classes.meal_card__name}>{meal.name}</div>
+              </div>
+              <div className={classes.meal__card__price_add}>
+                <div className={classes.meal_card__price}>
+                  {getPrice(meal.price)}
+                </div>
+                <div
+                  className={classes.meal_card__add}
+                  onClick={() => addMeal(meal)}
+                >
+                  <FontAwesomeIcon
+                    className={classes.meal_card__add_icon}
+                    icon={faPlusCircle}
+                  />
+                  Add
+                </div>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     );
   } else {
