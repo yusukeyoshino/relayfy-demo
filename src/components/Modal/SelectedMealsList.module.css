@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  z-index: 3;
+  z-index: 200;
 
   width: 80vw;
   height: 80vh;

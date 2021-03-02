@@ -35,12 +35,21 @@ const MealCard = ({
     calculateTotalUnits(newSelectedMeals);
   };
 
+  console.log();
   if (mealsList.length > 0) {
     return (
       <ul class={classes.wrapper}>
         {mealsList.map((meal) => {
           return (
             <li className={classes.meal_card}>
+              {selectedMeals.hasOwnProperty(meal.name) &&
+              selectedMeals[meal.name].count > 0 ? (
+                <div className={classes.meal_card__count}>
+                  {selectedMeals[meal.name].count}
+                </div>
+              ) : (
+                <div className={classes.meal_card__count_closed}></div>
+              )}
               <img
                 className={classes.meal_card__picture}
                 src={`images/${meal.image}`}

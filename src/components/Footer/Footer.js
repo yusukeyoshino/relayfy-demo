@@ -20,14 +20,17 @@ const Footer = ({
         <div className={classes.total__price}>
           <div>Total</div>
           <div className={classes.total__number}>$ {total}</div>
-          <FontAwesomeIcon
-            onClick={() => {
-              setCheckout(false);
-              setShowSelectedMeals(true);
-            }}
-            icon={faShoppingCart}
-            className={classes.total__order_icon}
-          />
+          <div className={classes.total__order_icons}>
+            <FontAwesomeIcon
+              onClick={() => {
+                setCheckout(false);
+                setShowSelectedMeals(true);
+              }}
+              icon={faShoppingCart}
+              className={classes.total__order_icon}
+            />
+            <div className={classes.total__order_count}>{totalUnits}</div>
+          </div>
         </div>
       </div>
       <div className={isScrolling ? classes.footer_closed : classes.footer}>

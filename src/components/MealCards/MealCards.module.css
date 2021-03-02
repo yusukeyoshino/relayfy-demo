@@ -27,6 +27,38 @@ ul {
   border: 1px solid #eeeeee;
   box-shadow: 0px 0px 13px 0px #e0dede;
   margin-bottom: 16px;
+  position: relative;
+}
+
+.meal_card__count {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -7px;
+  top: -7px;
+  transition: all 0.1s ease-out;
+}
+
+.meal_card__count_closed {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -7px;
+  top: -7px;
+  transition: all 1s ease-out;
+  transform: scale(0);
 }
 .meal_card__picture {
   width: 130px;

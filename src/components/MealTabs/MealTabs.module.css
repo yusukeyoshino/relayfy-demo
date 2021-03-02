@@ -6,7 +6,7 @@
   width: 100vw;
   justify-content: space-between;
   transition: all 0.1s ease-out;
-  z-index: 100;
+  z-index: 3;
 }
 
 .wrapper_closed {
@@ -16,7 +16,7 @@
   width: 100vw;
   justify-content: space-between;
   transition: all 0.1s ease-out;
-  z-index: 100;
+  z-index: 3;
 }
 
 .tab {
