@@ -23,7 +23,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 45vh;
+  height: 280px;
   border: 1px solid #eeeeee;
   box-shadow: 0px 0px 13px 0px #e0dede;
   margin-bottom: 16px;
@@ -61,7 +61,7 @@ ul {
   transform: scale(0);
 }
 .meal_card__picture {
-  width: 130px;
+  width: 120px;
   height: 130px;
   object-fit: contain;
   border-radius: 16px;
