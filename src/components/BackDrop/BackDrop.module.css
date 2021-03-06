@@ -10,7 +10,7 @@
 
 .wrapper_closed {
   position: fixed;
-  transform: translateY(100%);
+  transform: translateY(200%);
   width: 100vw;
   height: 100vh;
   z-index: 3;
