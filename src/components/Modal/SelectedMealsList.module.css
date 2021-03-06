@@ -201,9 +201,10 @@
   padding: 0 20px;
   font-family: Quicksand, sans-serif;
   color: #3caaff;
-  width: 80vw;
+  width: 100vw;
   overflow: hidden;
   padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .final_total__titles {
