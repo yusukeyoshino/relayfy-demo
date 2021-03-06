@@ -55,7 +55,7 @@ function App() {
 
       timeoutId = setTimeout(function () {
         setIsScrolling(false);
-      }, 300);
+      }, 1000);
     }
   };
 
@@ -117,7 +117,7 @@ function App() {
           </SwipeableViews>
 
           <Footer
-            isScrolling={isScrolling}
+            // isScrolling={isScrolling}
             total={total}
             totalUnits={totalUnits}
             setShowSelectedMeals={setShowSelectedMeals}

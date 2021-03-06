@@ -17,7 +17,7 @@ const Footer = ({
 }) => {
   return (
     <>
-      <div className={isScrolling ? classes.total_closed : classes.total}>
+      <div className={classes.total}>
         <div className={classes.total__count}>{totalUnits}</div>
         <div className={classes.total__price}>
           <div>Total</div>
@@ -40,7 +40,7 @@ const Footer = ({
           </div>
         </div>
       </div>
-      <div className={isScrolling ? classes.footer_closed : classes.footer}>
+      <div className={classes.footer}>
         <div
           className={classes.footer__checkout}
           onClick={() => {
