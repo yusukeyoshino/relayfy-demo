@@ -14,6 +14,7 @@ const Footer = ({
   isScrolling,
   setSelectedMealIndex,
   selectedMealIndex,
+  showSelectedMeals,
 }) => {
   return (
     <>
@@ -40,8 +41,12 @@ const Footer = ({
           </div>
         </div>
       </div>
-      <div className={classes.footer}>
+      <div
+        className={classes.footer}
+        style={showSelectedMeals ? { backgroundColor: "#fafad3" } : {}}
+      >
         <div
+          style={showSelectedMeals ? { opacity: "0" } : {}}
           className={classes.footer__checkout}
           onClick={() => {
             console.log(selectedMealIndex);

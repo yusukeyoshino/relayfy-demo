@@ -124,6 +124,7 @@ function App() {
             setCheckout={setCheckout}
             setSelectedMealIndex={setSelectedMealIndex}
             selectedMealIndex={selectedMealIndex}
+            showSelectedMeals={showSelectedMeals}
           />
         </div>
         <BackDrop show={showSelectedMeals} setShowModal={setShowSelectedMeals}>
