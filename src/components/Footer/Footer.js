@@ -12,6 +12,8 @@ const Footer = ({
   setShowSelectedMeals,
   setCheckout,
   isScrolling,
+  setSelectedMealIndex,
+  selectedMealIndex,
 }) => {
   return (
     <>
@@ -23,6 +25,7 @@ const Footer = ({
           <div className={classes.total__order_icons}>
             <FontAwesomeIcon
               onClick={() => {
+                setSelectedMealIndex(1);
                 setCheckout(false);
                 setShowSelectedMeals(true);
               }}
@@ -41,6 +44,8 @@ const Footer = ({
         <div
           className={classes.footer__checkout}
           onClick={() => {
+            console.log(selectedMealIndex);
+            setSelectedMealIndex(1);
             setShowSelectedMeals(true);
             setCheckout(true);
           }}

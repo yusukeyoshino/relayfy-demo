@@ -20,6 +20,7 @@ const SelectedMealsList = ({
   calculateTotal,
   calculateTotalUnits,
   checkout,
+  show,
 }) => {
   const TIPS = [0, 12, 15, 18];
   const [selectedTip, setSelectedTip] = useState(12);
@@ -191,7 +192,7 @@ const SelectedMealsList = ({
     );
   }
   return (
-    <div className={classes.wrapper}>
+    <div className={show ? classes.wrapper : classes.wrapper_closed}>
       <div className={classes.order__titles}>
         <div className={classes.order__title}>Order</div>
         <div className={classes.order__border}></div>

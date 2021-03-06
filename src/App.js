@@ -24,6 +24,7 @@ function App() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [totalUnits, setTotalUnits] = useState(0);
   const [currentTab, setCurrentTab] = useState(0);
+  const [selectedMealIndex, setSelectedMealIndex] = useState(1);
 
   const calculateTotal = (selectedMeals) => {
     let totalPrice = 0;
@@ -121,17 +122,35 @@ function App() {
             totalUnits={totalUnits}
             setShowSelectedMeals={setShowSelectedMeals}
             setCheckout={setCheckout}
+            setSelectedMealIndex={setSelectedMealIndex}
+            selectedMealIndex={selectedMealIndex}
           />
         </div>
         <BackDrop show={showSelectedMeals} setShowModal={setShowSelectedMeals}>
-          <SelectedMealsList
-            setSelectedMeals={setSelectedMeals}
-            selectedMeals={selectedMeals}
-            total={total}
-            calculateTotal={calculateTotal}
-            calculateTotalUnits={calculateTotalUnits}
-            checkout={checkout}
-          />
+          <SwipeableViews
+            axis="y"
+            index={selectedMealIndex}
+            onChangeIndex={(i) => {
+              setSelectedMealIndex(i);
+              setShowSelectedMeals(false);
+            }}
+          >
+            <div
+              style={{
+                height: "100vh",
+                zIndex: "1000",
+              }}
+            ></div>
+            <SelectedMealsList
+              show={showSelectedMeals}
+              setSelectedMeals={setSelectedMeals}
+              selectedMeals={selectedMeals}
+              total={total}
+              calculateTotal={calculateTotal}
+              calculateTotalUnits={calculateTotalUnits}
+              checkout={checkout}
+            />
+          </SwipeableViews>
         </BackDrop>
       </Elements>
     </>

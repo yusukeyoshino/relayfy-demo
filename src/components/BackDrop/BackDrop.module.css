@@ -5,4 +5,16 @@
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.5);
   top: 0;
+  transition: all 0.2s ease-out;
+}
+
+.wrapper_closed {
+  position: fixed;
+  transform: translateY(100%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  transition: all 0.2s ease-out;
 }

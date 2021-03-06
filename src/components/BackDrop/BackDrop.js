@@ -5,8 +5,7 @@ const BackDrop = (props) => {
   return (
     <>
       <div
-        className={classes.wrapper}
-        style={props.show ? { display: "block" } : { display: "none" }}
+        className={props.show ? classes.wrapper : classes.wrapper_closed}
         onClick={() => props.setShowModal(false)}
       >
         {props.children}
