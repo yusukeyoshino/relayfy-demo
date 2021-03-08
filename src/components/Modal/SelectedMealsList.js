@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./SelectedMealsList.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Elements } from "@stripe/react-stripe-js";
-import {
-  PaymentRequestButtonElement,
-  useStripe,
-} from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-
-const stripe = loadStripe(
-  "pk_test_51H6anoHHZTQ6Py3DK1a4NR77HH46GAfcP3dwaImMdb6HE8GOXtJg2zf2K3Rs48LbEw2fRpiRxNAnCWjEkggKffzp00YyocFerY"
-);
 
 const SelectedMealsList = ({
   selectedMeals,
@@ -24,37 +14,29 @@ const SelectedMealsList = ({
 }) => {
   const TIPS = [0, 12, 15, 18];
   const [selectedTip, setSelectedTip] = useState(12);
-  const [paymentRequest, setPaymentRequest] = useState(null);
-  const stripe = useStripe();
 
-  useEffect(() => {
-    if (stripe) {
-      const pr = stripe.paymentRequest({
-        country: "US",
-        currency: "usd",
-        total: {
-          label: "Demo total",
-          amount: 1099,
-        },
-        requestPayerName: true,
-        requestPayerEmail: true,
-      });
+  const addAndRemoveItem = (key, addItem) => {
+    let newSelectedMeals = { ...selectedMeals };
 
-      // Check the availability of the Payment Request API.
-      pr.canMakePayment().then((result) => {
-        if (result) {
-          setPaymentRequest(pr);
-        }
-      });
+    if (addItem) {
+      newSelectedMeals[key].count++;
+      setSelectedMeals(newSelectedMeals);
+      calculateTotal(newSelectedMeals);
+      calculateTotalUnits(newSelectedMeals);
+    } else {
+      newSelectedMeals[key].count--;
+      setSelectedMeals(newSelectedMeals);
+      calculateTotal(newSelectedMeals);
+      calculateTotalUnits(newSelectedMeals);
     }
-  }, [stripe]);
+  };
 
   const getMealsList = (key, i) => {
     if (selectedMeals[key].count === 0) {
       return;
     } else {
       return (
-        <div className={classes.meal}>
+        <div className={classes.meal} key={key}>
           <div className={classes.meal__name}>
             {i + 1}.{key}
           </div>
@@ -87,31 +69,6 @@ const SelectedMealsList = ({
     }
   };
 
-  const selectedTipStyle = () => {
-    return {
-      color: "#fafad3",
-      backgroundColor: "",
-    };
-  };
-
-  const options = {
-    paymentRequest,
-    style: {
-      paymentRequestButton: {
-        type: "default",
-        // One of 'default', 'book', 'buy', or 'donate'
-        // Defaults to 'default'
-
-        theme: "dark",
-        // One of 'dark', 'light', or 'light-outline'
-        // Defaults to 'dark'
-
-        height: "40px",
-        // Defaults to '40px'. The width is always '100%'.
-      },
-    },
-  };
-
   const renderTipOption = () => {
     return (
       <>
@@ -124,6 +81,7 @@ const SelectedMealsList = ({
             <div className={classes.tip__options}>
               {TIPS.map((tip) => (
                 <div
+                  key={tip}
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedTip(tip);
@@ -169,21 +127,6 @@ const SelectedMealsList = ({
     );
   };
 
-  const addAndRemoveItem = (key, addItem) => {
-    let newSelectedMeals = { ...selectedMeals };
-
-    if (addItem) {
-      newSelectedMeals[key].count++;
-      setSelectedMeals((prevState) => newSelectedMeals);
-      calculateTotal(newSelectedMeals);
-      calculateTotalUnits(newSelectedMeals);
-    } else {
-      newSelectedMeals[key].count--;
-      setSelectedMeals((prevState) => newSelectedMeals);
-      calculateTotal(newSelectedMeals);
-      calculateTotalUnits(newSelectedMeals);
-    }
-  };
   if (total === 0) {
     return (
       <div className={classes.wrapper}>

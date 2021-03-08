@@ -1,17 +1,13 @@
 import React from "react";
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClipboardList,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = ({
   total,
   totalUnits,
   setShowSelectedMeals,
   setCheckout,
-  isScrolling,
   setSelectedMealIndex,
   selectedMealIndex,
   showSelectedMeals,
@@ -49,7 +45,6 @@ const Footer = ({
           style={showSelectedMeals ? { opacity: "0" } : {}}
           className={classes.footer__checkout}
           onClick={() => {
-            console.log(selectedMealIndex);
             setSelectedMealIndex(1);
             setShowSelectedMeals(true);
             setCheckout(true);

@@ -10,7 +10,6 @@
   border-top-left-radius: 36px;
   border-top-right-radius: 36px;
   padding: 20px;
-  /* transition: all 0.1s ease-out; */
 
   box-sizing: border-box;
   border-bottom: none;
@@ -26,24 +25,6 @@
   border-radius: 25px;
   margin-bottom: 10px;
 }
-
-/* .wrapper_closed {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translateY(100%) translateX(-50%);
-  -webkit-transform: translateY(100%) translateX(-50%);
-  z-index: 200;
-
-  width: 87vw;
-  height: 80vh;
-  background-color: #fafad3;
-  border: 3px solid #3caaff;
-
-  border-radius: 36px;
-  padding: 20px;
-  transition: all 0.1s ease-out;
-} */
 
 .order__titles {
   display: flex;
