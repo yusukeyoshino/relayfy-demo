@@ -3,7 +3,9 @@
 ## How to start
 
 Run this command in root directory.
+`npm install` to install dependencies and
 `npm run start`
+
 Then you can debug in your [localhost:3000](http:localhost:3000)
 
 ## Dependencies
